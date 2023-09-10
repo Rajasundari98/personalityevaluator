@@ -67,7 +67,6 @@ public class BigFivePersonalityTest implements PersonalityTest{
         result += "Extraversion: " + extraversion + "\n";
         result += "Neuroticism: " + neuroticism + "\n";
         result += "Conscientiousness: " + conscientiousness + "\n";
-        // Determine other traits...
 
         return result;
     }

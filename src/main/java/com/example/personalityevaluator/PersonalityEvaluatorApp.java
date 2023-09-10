@@ -35,8 +35,8 @@ public class PersonalityEvaluatorApp extends Application {
         root.setPadding(new Insets(20));
 
         // Load questions from external files
-        extrovertQuestions.addAll(loadQuestionsFromFile("extrovert_questions.txt"));
-        introvertQuestions.addAll(loadQuestionsFromFile("introvert_questions.txt"));
+        extrovertQuestions.addAll(loadQuestionsFromFile("N:\\personalityevaluator\\src\\main\\resources\\extrovert_questions.txt"));
+        introvertQuestions.addAll(loadQuestionsFromFile("N:\\personalityevaluator\\src\\main\\resources\\introvert_questions.txt"));
 
         // GUI components
         Label titleLabel = new Label("Personality Type Evaluator");
