@@ -38,6 +38,9 @@ public class PersonalityEvaluatorApp extends Application {
         extrovertQuestions.addAll(loadQuestionsFromFile("N:\\personalityevaluator\\src\\main\\resources\\extrovert_questions.txt"));
         introvertQuestions.addAll(loadQuestionsFromFile("N:\\personalityevaluator\\src\\main\\resources\\introvert_questions.txt"));
 
+        // Shuffle the question lists
+        Collections.shuffle(introvertQuestions);
+        Collections.shuffle(extrovertQuestions);
         // GUI components
         Label titleLabel = new Label("Personality Type Evaluator");
         titleLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
@@ -91,7 +94,7 @@ public class PersonalityEvaluatorApp extends Application {
             introvertScore += getAnswerScore(6 - answer);
 
             questionIndex++;
-            if (questionIndex < extrovertQuestions.size() + introvertQuestions.size()) {
+            if (questionIndex < 20 ) {
                 displayNextQuestion();
                 answerGroup.getSelectedToggle().setSelected(false);
             } else {
@@ -101,10 +104,10 @@ public class PersonalityEvaluatorApp extends Application {
     }
 
     private void displayNextQuestion() {
-        if (questionIndex < extrovertQuestions.size()) {
+        if (questionIndex < 10) {
             questionLabel.setText(extrovertQuestions.get(questionIndex));
-        } else if (questionIndex - extrovertQuestions.size() < introvertQuestions.size()) {
-            questionLabel.setText(introvertQuestions.get(questionIndex - extrovertQuestions.size()));
+        } else if (questionIndex < 20) {
+            questionLabel.setText(introvertQuestions.get(questionIndex ));
         }
     }
 
